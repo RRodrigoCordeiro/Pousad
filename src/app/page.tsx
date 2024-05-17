@@ -5,7 +5,7 @@ import React from 'react';
 export default function Home() {
   return (
     <main>
-      <header className=" text-black py-4">
+      <header className=" text-black py-4 ">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <Image src="" alt="Pousada Logo" width={100} height={20} />
@@ -13,7 +13,7 @@ export default function Home() {
             <p className="text-2xl font-bold ml-2 text-blue-500">da Montanha</p>
           </div>
           <nav>
-            <ul className="flex space-x-4 mr-5">
+            <ul className="flex space-x-4 mr-5" >
               <li><a href="#" className="hover:text-gray-300">Home</a></li>
               <li><a href="#" className="hover:text-gray-300">Quartos</a></li>
               <li><a href="#" className="hover:text-gray-300">Sobre</a></li>
@@ -28,16 +28,26 @@ export default function Home() {
           <h1 className="text-3xl text-white font-bold">Pousada da Montanha</h1>
           <p className="text-2xl mt-14 text-white">Venha conhecer a melhor pousada da Região</p>
         </div>
-      </div>
+      </div> 
       <div className="text-3xl font-bold text-center mt-24 text-black-400">
         <h2>SEJA BEM-VINDO(A)!</h2>
       </div>
       <div className="text-center mt-18 text-black-400 text-1xl ">
           <p className="mt-5">Relaxe em nossas acomodações e curta o melhor da nossa capital</p>
-          <p className="mt-5">Temos diversos quartos com o máximo de conforto</p>
+          <p className="mt-5">O Pousada da Montanha recebe pessoas de todo o mundo</p>
       </div>
-      <div>
-        <h2>Conheça nossos quartos</h2>
+      <div className="text-center mt-20 text-2xl font-bold">
+        <h3>Conheça nossos Quartos</h3>
+      </div>
+      <div className="flex justify-center m-4 mt-7">
+        <Image className="w-[280px] h-[190px] mr-4 hover: cursor-pointer" src="/QuartoIndividual.jpg" alt="Pousada Logo" width={200} height={80} />
+        <Image className="w-[280px] h-[190px] mr-4  hover: cursor-pointer" src="/QuartoCasal.jpg" alt="Pousada Logo" width={200} height={80} />
+        <Image className="w-[280px] h-[190px]  hover: cursor-pointer" src="/QuartoTematico.jpg" alt="Pousada Logo" width={200} height={80} />
+      </div>
+      <div className="flex  space-x-44  justify-center  ">
+        <p className="text-green-900 flex items-center">Quarto Individual</p>
+        <p className="text-green-900">Quarto de Casal</p>
+        <p className="text-green-900">Quarto Temático</p>
       </div>
     </main>
   );
