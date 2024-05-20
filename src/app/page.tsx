@@ -65,7 +65,7 @@ export default function Home() {
           <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="" width={200} height={10}/>
           <div className="flex justify-center">
             <div>
-              <h3 className="text-left font-bold mb-2">A pousada</h3>
+              <h3 className="text-left font-bold mb-2 ">A pousada</h3>
               <p className="w-[320px] text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis rem nam natus reiciendis facere praesentium mollitia .</p>
             </div>
           </div>  
@@ -86,7 +86,16 @@ export default function Home() {
             </div>
           </div>
       </div>
-      
+      <footer className="bg-green-800 h-28 mt-20 flex justify-center items-center text-white">
+        <div className="flex space-x-20">
+          <p className="text-white font-bold max-w-44">Entre em contato e faça seu cadastro:</p>
+          <p className="text-white">Endereço: Av.1234</p>
+          <p className="text-white">Telefone: (00) 0000-0000</p>
+          <p className="text-white font-bold cursor-pointer hover:text-blue-500">Clique aqui para fazer a reserva</p>
+        </div>
+       
+      </footer>
+
     </main>
   );
 }
