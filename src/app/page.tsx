@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from 'react';
 
 
+
 export default function Home() {
   return (
     <main>
@@ -58,14 +59,14 @@ export default function Home() {
           <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10}/>
           <div className="flex justify-center">
             <div>
-              <h3 className="text-left font-bold mb-2">A pousada</h3>
+              <h3 className="text-left font-bold mb-2">Garagem</h3>
               <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste debitis ab praesentium rem omnis aspernatur</p>
             </div>
           </div>
           <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="" width={200} height={10}/>
           <div className="flex justify-center">
             <div>
-              <h3 className="text-left font-bold mb-2 ">A pousada</h3>
+              <h3 className="text-left font-bold mb-2 ">Café da manhã</h3>
               <p className="w-[320px] text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis rem nam natus reiciendis facere praesentium mollitia .</p>
             </div>
           </div>  
@@ -74,16 +75,53 @@ export default function Home() {
           <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10}/>
           <div className="flex justify-center">
             <div>
-              <h3 className="text-left font-bold mb-2">A pousada</h3>
+              <h3 className="text-left font-bold mb-2">Espaço para Pets</h3>
               <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
             </div>
           </div>
           <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10}/>
           <div className="flex justify-center">
             <div>
-              <h3 className="text-left font-bold mb-2">A pousada</h3>
+              <h3 className="text-left font-bold mb-2">250 Metros perto da praia</h3>
               <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
             </div>
+          </div> 
+      </div>
+      <div className="flex justify-center space-x-6 mt-12">
+          <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10}/>
+          <div className="flex justify-center">
+            <div>
+              <h3 className="text-left font-bold mb-2">Piscina</h3>
+              <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
+            </div>
+          </div>
+          <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10}/>
+          <div className="flex justify-center">
+            <div>
+              <h3 className="text-left font-bold mb-2">Conforto</h3>
+              <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
+            </div>
+          </div> 
+      </div>
+      <div className="text-center">
+          <h3 className="mt-20 text-2xl font-bold">Localização</h3>
+          <p className="mt-5">A pousada da Montanha está localizada uma posição estrategica para você uma expericia fantastica</p>
+      </div>
+      <div className="flex mt-20 justify-center items-center ">
+          <div className="mr-10">
+            <h3 className="font-bold ">250 metros da praia</h3>
+            <p className="mt-5">Próximo a pousada temos, farmácia, restaurante, merdacinho, peixaria e praia</p>
+            <p className="mt-5 max-w-[600px] text-justify ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, repudiandae alias aliquid distinctio labore voluptatum et. Nihil ullam dolores quam illo, esse cupiditate unde, fugit, molestias natus inventore sequi harum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo culpa vel tenetur facilis nobis quod mollitia sed ratione asperiores possimus eligendi, repellat voluptatibus autem repudiandae hic itaque, fuga, at architecto.</p>
+          </div>
+          <div>
+             <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15836.331905075587!2d-34.8798557!3d-7.1163828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace79b0f0c9237%3A0x7c16d2f285ceb3d3!2sShopping%20Tambi%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1716315952309!5m2!1spt-BR!2sbr"
+                width="500"
+                height="300"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
       </div>
       <footer className="bg-green-800 h-28 mt-20 flex justify-center items-center text-white">
