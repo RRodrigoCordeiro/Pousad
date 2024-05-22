@@ -14,22 +14,23 @@ export default function Home() {
           </div>
           <nav>
             <ul className="flex space-x-4 mr-5" >
-              <li><a href="#" className="hover:text-gray-300">Home</a></li>
-              <li><a href="#" className="hover:text-gray-300">Quartos</a></li>
-              <li><a href="#" className="hover:text-gray-300">Sobre</a></li>
-              <li><a href="#" className="hover:text-gray-300">Contato</a></li>
+              <li><a href="#home" className="hover:text-gray-300">Home</a></li>
+              <li><a href="#quartos" className="hover:text-gray-300">Quartos</a></li>
+              <li><a href="#sobre" className="hover:text-gray-300">Sobre</a></li>
+              <li><a href="#localizacao" className="hover:text-gray-300">Localização</a></li>
+              <li><a href="#contato" className="hover:text-gray-300">Contato</a></li>
             </ul>
           </nav>
         </div>
       </header>
-      <div className="relative">
+      <div className="relative" id="#home">
         <Image className="w-[50] h-[625px]" src="/mar.png" alt="Pousada Logo" width={1519} height={800} />
         <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 bg-green-950 bg-opacity-50 p-10 text-center">
           <h1 className="text-3xl text-white font-bold">Pousada da Montanha</h1>
           <p className="text-2xl mt-14 text-white">Venha conhecer a melhor pousada da Região</p>
        </div>
       </div> 
-      <div className="text-3xl font-bold text-center mt-24 text-black-400">
+      <div className="text-3xl font-bold text-center mt-24 text-black-400"  id="quartos">
         <h2>SEJA BEM-VINDO(A)!</h2>
       </div>
       <div className="text-center mt-18 text-black-400 text-1xl ">
@@ -49,10 +50,10 @@ export default function Home() {
         <p className="text-green-900">Quarto de Casal</p>
         <p className="text-green-900">Quarto Temático</p>
       </div>
-      <div className="text-center mt-20 text-2xl font-bold">
+      <div className="text-center mt-20 text-2xl font-bold" id="sobre">
         <h3>Vantagens da Pousada</h3>
       </div>
-      <div className="text-center mt-5 text-1xl">
+      <div className="text-center mt-5 text-1xl" >
         <p>Conheça sobre mais sobre a melhor pousada da região</p>
       </div>
       <div className="flex justify-center space-x-6 mt-12">
@@ -103,7 +104,7 @@ export default function Home() {
             </div>
           </div> 
       </div>
-      <div className="text-center">
+      <div className="text-center" id="localizacao">
           <h3 className="mt-20 text-2xl font-bold">Localização</h3>
           <p className="mt-5">A pousada da Montanha está localizada uma posição estrategica para você uma expericia fantastica</p>
       </div>
@@ -124,7 +125,7 @@ export default function Home() {
             ></iframe>
           </div>
       </div>
-      <footer className="bg-green-800 h-28 mt-20 flex justify-center items-center text-white">
+      <footer className="bg-green-800 h-28 mt-20 flex justify-center items-center text-white" id="contato">
         <div className="flex space-x-20">
           <p className="text-white font-bold max-w-44">Entre em contato e faça seu cadastro:</p>
           <p className="text-white">Endereço: Av.1234</p>
