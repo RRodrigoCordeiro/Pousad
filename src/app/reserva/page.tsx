@@ -1,6 +1,6 @@
 // app/reserva/reserva.tsx
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Rodape from '../components/Rodape';
 import Background from '../components/Background';
 import Link from "next/link";
@@ -12,13 +12,13 @@ export default function Reserva() {
 
   const [adulto, setAdulto] = useState(1);
   const [crianca, setCrianca] = useState(0);
-  
+  const [total, setTotal] = useState(0);
 
   const AdicionarAdulto = () => {
-    if(adulto < 7){
+    if(adulto < 4){
       setAdulto(adulto + 1)
     } else {
-      console.log("Erro: Não é possível ter mais que 7 adultos");
+      console.log("Erro: Não é possível ter mais que 4 adultos");
     }
 
   };
@@ -33,21 +33,23 @@ export default function Reserva() {
   };
 
   const AdicionarCrianca = () => {
-    if(crianca < 6){
+    if(crianca < 4){
       setCrianca(crianca + 1);
     } else{
-      console.log("Erro: Não é possível  ter mais que 6 crianças.");
+      console.log("Erro: Não é possível  ter mais que 4 crianças.");
     }
   };
 
   const RemoverCrianca = () => {
-   if(crianca < 7 && crianca > 0){
+   if(crianca <= 4 && crianca > 0){
     setCrianca(crianca - 1);
    }else {
     console.log("Erro: Não é possível ter menos que 0 criança. ");
    }
   };
- 
+  useEffect(() => {
+    setTotal(adulto + crianca);
+  }, [adulto, crianca]);
 
 
   return (
@@ -89,7 +91,7 @@ export default function Reserva() {
            adulto <= 0 && <p className="text-center mt-1 font-bold text-red-500">Atenção: Não é possível fazer a reserva com 0 ou menos de 0 adulto.Selecione novamente a quantidade de adulto(s)</p>
         }
         {
-          adulto >= 7 && <p className="text-center mt-1 font-bold text-red-500">Atenção: 7 adultos é a  capacidade máxima  do quarto</p>
+          adulto >= 4 && <p className="text-center mt-1 font-bold text-red-500">Atenção: 4 adultos é a  capacidade máxima  do quarto</p>
         }
         <fieldset className="flex flex-row items-center justify-evenly space-x-8 m-auto w-[620px] h-11 border border-zinc-500 mt-8">
           <h3 className="font-bold text-blue-500">Criança(s)</h3>
@@ -98,12 +100,15 @@ export default function Reserva() {
           <button onClick={RemoverCrianca} className="border border-zinc-950 rounded-full  h-7 w-7 mt-1 flex items-center justify-center">-</button>
         </fieldset>
         {
-          crianca >= 6 && <p  className="text-center mt-1 font-bold text-red-500">Atenção: 6 crinças é a capacidade máxima do quarto</p> 
+          crianca >= 4 && <p  className="text-center mt-1 font-bold text-red-500">Atenção: 4 crinças é a capacidade máxima do quarto</p> 
         }
         {
           crianca < 0 && <p>Atenção: Não é possível ter menos que 0 criança</p>
         }
-    
+        <fieldset className="flex flex-row items-center justify-evenly space-x-8 m-auto w-[620px] h-11 border border-zinc-500 mt-8">
+          <h3 className="font-bold text-blue-500">Total de hóspedes:</h3>
+          <p>{total}</p>
+        </fieldset>
       </fieldset>
       <Rodape />
     </>
