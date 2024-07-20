@@ -7,13 +7,27 @@ import Link from "next/link";
 import Image from "next/image";
 import axios from 'axios';
 
-
+interface Endereco {
+  cep: string;
+  logradouro: string;
+  complemento: string;
+  bairro: string;
+  localidade: string;
+  uf: string;
+  ddd: string;
+  ibge: string;
+  gia: string;
+  siafi: string;
+}
 
 export default function Reserva() {
 
   const [adulto, setAdulto] = useState(1);
   const [crianca, setCrianca] = useState(0);
   const [total, setTotal] = useState(0);
+  const [cep, setCep] = useState('');
+  const [endereco, setEndereco] = useState<Endereco | null>(null);
+  const [error, setError] = useState(null);
 
   const AdicionarAdulto = () => {
     if(adulto < 4){
@@ -52,9 +66,7 @@ export default function Reserva() {
     setTotal(adulto + crianca);
   }, [adulto, crianca]);
 
-  const [cep, setCep] = useState('');
-  const [endereco, setEndereco] = useState(null);
-  const [error, setError] = useState(null);
+  
   
 
   const buscarCep = () => {
