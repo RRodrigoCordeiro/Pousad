@@ -5,6 +5,7 @@ import Rodape from '../components/Rodape';
 import Background from '../components/Background';
 import Link from "next/link";
 import Image from "next/image";
+import axios from 'axios';
 
 
 
@@ -51,6 +52,29 @@ export default function Reserva() {
     setTotal(adulto + crianca);
   }, [adulto, crianca]);
 
+  const [cep, setCep] = useState('');
+  const [endereco, setEndereco] = useState(null);
+  const [error, setError] = useState(null);
+  
+
+  const buscarCep = () => {
+
+    const urlBase = `https://viacep.com.br/ws/${cep}/json/`
+
+    axios.get(urlBase)
+      .then(response => {
+        setEndereco(response.data);
+        setError(null)
+      })
+      .catch(error => {
+        console.log("Atenção: Erro ao buscar CEP", error)
+        setError("Erro ao buscar CEP");
+        setEndereco(null)
+      })
+
+  }
+
+
 
   return (
     <>
@@ -64,7 +88,7 @@ export default function Reserva() {
 
       <Background />
 
-      <fieldset className="border border-blue-500 rounded-lg p-4 mt-10 container mx-auto h-[900px]   ">
+      <fieldset className="border border-blue-500 rounded-lg p-4 mt-10 container mx-auto h-full   ">
         <legend className="font-bold">POUSADA DA <span className="text-blue-500 font-bold">MONTANHA</span></legend>
         <h1 className="text-center mb-10 text-blue-500 font-bold">Faça sua reserva e venha curtir o interior da melhor pousada da região</h1>
         <div className="flex flex-row justify-center space-x-8">
@@ -109,7 +133,45 @@ export default function Reserva() {
           <h3 className="font-bold text-blue-500">Total de hóspedes:</h3>
           <p>{total}</p>
         </fieldset>
+        <h3 className='font-bold mt-10 ml-16'>Complete as informações abaixo:</h3>
+        <div className='flex  justify-center mt-12 space-x-3 '>
+          <button onClick={buscarCep}>Buscar CEP:</button>
+          <input
+            type="text"
+            value={cep}
+            onChange={(e) => setCep(e.target.value)}
+            placeholder='Digite seu CEP'
+            className='border border-zinc-600 '
+            />
+        </div>
+        
+        {
+          endereco && (
+            <div>
+              <div className='flex flex-row justify-center mt-12 space-x-20'>
+                <p className='border border-zinc-950 w-60 h-10 text-center '><span className='font-bold'>CEP digitado:</span> {endereco.cep}</p>
+                <p  className='border border-zinc-950 w-60 h-10 text-center'>Logradouro: {endereco.logradouro}</p>
+                <p  className='border border-zinc-950 w-60 h-10 text-center '>Complemento: {endereco.complemento}</p>
+                <p  className='border border-zinc-950 w-60 h-10 text-center '>Bairro: {endereco.bairro}</p>
+              </div>
+              <div>
+                <p>Localidade: {endereco.localidade}</p>
+                <p>UF: {endereco.uf}</p>
+                <p>DDD: {endereco.ddd}</p>
+                <p>IBGE: {endereco.ibge}</p>
+              </div>
+              <div>
+                <p>GIA: {endereco.gia}</p>
+                <p>SIAFI: {endereco.siafi}</p>
+              </div>
+            
+            </div>
+            
+          )
+        }
+        {error && <p>{error}</p> }
       </fieldset>
+      
       <Rodape />
     </>
   );
