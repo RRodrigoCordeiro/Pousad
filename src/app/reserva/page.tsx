@@ -30,7 +30,7 @@ export default function Reserva() {
   const [error, setError] = useState(null);
 
   const AdicionarAdulto = () => {
-    if(adulto < 4){
+    if (adulto < 4) {
       setAdulto(adulto + 1)
     } else {
       console.log("Erro: Não é possível ter mais que 4 adultos");
@@ -39,35 +39,32 @@ export default function Reserva() {
   };
 
   const RemoverAdulto = () => {
-    if(adulto > 0){
+    if (adulto > 0) {
       setAdulto(adulto - 1)
-    }else{
+    } else {
       console.log("Erro: Não é possível ter menos que 0 adultos.");
 
     }
   };
 
   const AdicionarCrianca = () => {
-    if(crianca < 4){
+    if (crianca < 4) {
       setCrianca(crianca + 1);
-    } else{
+    } else {
       console.log("Erro: Não é possível  ter mais que 4 crianças.");
     }
   };
 
   const RemoverCrianca = () => {
-   if(crianca <= 4 && crianca > 0){
-    setCrianca(crianca - 1);
-   }else {
-    console.log("Erro: Não é possível ter menos que 0 criança. ");
-   }
+    if (crianca <= 4 && crianca > 0) {
+      setCrianca(crianca - 1);
+    } else {
+      console.log("Erro: Não é possível ter menos que 0 criança. ");
+    }
   };
   useEffect(() => {
     setTotal(adulto + crianca);
   }, [adulto, crianca]);
-
-  
-  
 
   const buscarCep = () => {
 
@@ -86,6 +83,19 @@ export default function Reserva() {
 
   }
 
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const name = event.target.name;
+    const value = event.target.value;
+
+    setEndereco(CopiaNovoEndereco => {
+      if (CopiaNovoEndereco) {
+        // { ...novoEndereco } cria uma cópia do estado anterior.
+        // [name]: value atualiza ou adiciona a chave especificada com o novo valor
+        return { ...CopiaNovoEndereco, [name]: value };
+      }
+      return null;
+    });
+  };
 
 
   return (
@@ -124,7 +134,7 @@ export default function Reserva() {
           <button onClick={RemoverAdulto} className="border border-zinc-950 rounded-full  h-7 w-7 mt-1 flex items-center justify-center">-</button>
         </fieldset>
         {
-           adulto <= 0 && <p className="text-center mt-1 font-bold text-red-500">Atenção: Não é possível fazer a reserva com 0 ou menos de 0 adulto.Selecione novamente a quantidade de adulto(s)</p>
+          adulto <= 0 && <p className="text-center mt-1 font-bold text-red-500">Atenção: Não é possível fazer a reserva com 0 ou menos de 0 adulto.Selecione novamente a quantidade de adulto(s)</p>
         }
         {
           adulto >= 4 && <p className="text-center mt-1 font-bold text-red-500">Atenção: 4 adultos é a  capacidade máxima  do quarto</p>
@@ -132,11 +142,11 @@ export default function Reserva() {
         <fieldset className="flex flex-row items-center justify-evenly space-x-8 m-auto w-[620px] h-11 border border-zinc-500 mt-8">
           <h3 className="font-bold text-blue-500">Criança(s)</h3>
           <button onClick={AdicionarCrianca} className="border border-zinc-950 rounded-full h-7 w-7 mt-1 flex items-center justify-center">+</button>
-          <p>{crianca}</p> 
+          <p>{crianca}</p>
           <button onClick={RemoverCrianca} className="border border-zinc-950 rounded-full  h-7 w-7 mt-1 flex items-center justify-center">-</button>
         </fieldset>
         {
-          crianca >= 4 && <p  className="text-center mt-1 font-bold text-red-500">Atenção: 4 crinças é a capacidade máxima do quarto</p> 
+          crianca >= 4 && <p className="text-center mt-1 font-bold text-red-500">Atenção: 4 crinças é a capacidade máxima do quarto</p>
         }
         {
           crianca < 0 && <p>Atenção: Não é possível ter menos que 0 criança</p>
@@ -146,44 +156,66 @@ export default function Reserva() {
           <p>{total}</p>
         </fieldset>
         <h3 className='font-bold mt-10 ml-16'>Complete as informações abaixo:</h3>
-        <div className='flex  justify-center mt-12 space-x-3 '>
-          <button onClick={buscarCep}>Buscar CEP:</button>
+        <div className='mt-6 mb-12 flex justify-center space-x-9'>
+          <button onClick={buscarCep}>Clicar para buscar CEP:</button>
           <input
             type="text"
             value={cep}
             onChange={(e) => setCep(e.target.value)}
             placeholder='Digite seu CEP'
             className='border border-zinc-600 '
-            />
+          />
         </div>
-        
-        {
-          endereco && (
-            <div>
-              <div className='flex flex-row justify-center mt-12 space-x-20'>
-                <p className='border border-zinc-950 w-60 h-10 text-center '><span className='font-bold'>CEP digitado:</span> {endereco.cep}</p>
-                <p  className='border border-zinc-950 w-60 h-10 text-center'>Logradouro: {endereco.logradouro}</p>
-                <p  className='border border-zinc-950 w-60 h-10 text-center '>Complemento: {endereco.complemento}</p>
-                <p  className='border border-zinc-950 w-60 h-10 text-center '>Bairro: {endereco.bairro}</p>
-              </div>
-              <div>
-                <p>Localidade: {endereco.localidade}</p>
-                <p>UF: {endereco.uf}</p>
-                <p>DDD: {endereco.ddd}</p>
-                <p>IBGE: {endereco.ibge}</p>
-              </div>
-              <div>
-                <p>GIA: {endereco.gia}</p>
-                <p>SIAFI: {endereco.siafi}</p>
-              </div>
-            
-            </div>
-            
-          )
-        }
-        {error && <p>{error}</p> }
+        {error && <p className='text-red-600 text-center font-bold'>{error}</p>}
+        <div className='flex flex-row justify-evenly mt-11'>
+          <div>
+            <p className="font-bold text-blue-500">Endereço:</p>
+            <span>{endereco?.cep}</span>
+          </div>
+          <div>
+            <p className="font-bold text-blue-500">Logradouro:</p>
+            <span>{endereco?.logradouro} </span>
+          </div>
+          <div>
+            <p className="font-bold text-blue-500">Complemento:</p>
+            <input 
+              type="text"
+              name="complemento" 
+              value={endereco?.complemento} 
+              onChange={handleChange} 
+              className='border border-zinc-600' 
+            />
+          </div>
+        </div>
+        <div className='flex flex-row justify-evenly mt-11'>
+          <div>
+            <p className="font-bold text-blue-500">Bairro:</p>
+            <span>{endereco?.bairro}</span>
+          </div>
+          <div>
+            <p className="font-bold text-blue-500">Localidade: </p>
+            <span>{endereco?.localidade}</span>
+          </div>
+          <div>
+            <p className="font-bold text-blue-500">UF: </p>
+            <span>{endereco?.uf}</span>
+          </div>
+        </div>
+        <div className='flex flex-row justify-evenly mt-11'>
+          <div>
+            <p className="font-bold text-blue-500">DDD:</p>
+            <span>{endereco?.ddd}</span>
+          </div>
+          <div>
+            <p className="font-bold text-blue-500">IBGE:</p>
+            <span>{endereco?.ibge}</span>
+          </div>
+          <div>
+            <p  className="font-bold text-blue-500">GIA:</p>
+            <span> {endereco?.gia}</span>
+          </div>
+        </div>
       </fieldset>
-      
       <Rodape />
     </>
   );
