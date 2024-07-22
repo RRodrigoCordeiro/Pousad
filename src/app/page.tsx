@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from 'react';
+import Link from "next/link";
 import Cabecalho from "./components/Cabecalho";
 import Rodape from "./components/Rodape";
 import Localizacao from "./components/Localizacao";
@@ -21,7 +22,9 @@ export default function Home() {
         <h3>Conheça nossos Quartos</h3>
       </div>
       <div className="flex justify-center m-4 mt-7">
-        <Image className="w-[280px] h-[190px] mr-4 hover: cursor-pointer" src="/QuartoIndividual.jpg" alt="Pousada Logo" width={200} height={80} />
+        <Link href="/quartoIndividual">
+          <Image className="w-[280px] h-[190px] mr-4 hover: cursor-pointer" src="/QuartoIndividual.jpg" alt="Pousada Logo" width={200} height={80} />
+        </Link>
         <Image className="w-[280px] h-[190px] mr-4  hover: cursor-pointer" src="/QuartoCasal.jpg" alt="Pousada Logo" width={200} height={80} />
         <Image className="w-[280px] h-[190px] mr-4 hover: cursor-pointer" src="/QuartoTematico.jpg" alt="Pousada Logo" width={200} height={80} />
       </div>

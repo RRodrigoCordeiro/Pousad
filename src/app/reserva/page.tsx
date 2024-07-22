@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import Rodape from '../components/Rodape';
 import Background from '../components/Background';
-import Link from "next/link";
-import Image from "next/image";
+import CabecalhoPaginacao from '../components/CabecalhoPaginacao';
 import axios from 'axios';
+
 
 interface Endereco {
   cep: string;
@@ -100,14 +100,7 @@ export default function Reserva() {
 
   return (
     <>
-      <div className='container mx-auto flex justify-between items-center mt-3 sm:container sm:flex flex-col  md:flex md:flex-row'>
-        <div className="flex items-center ">
-          <h1 className="text-2xl font-bold ml-2 text-black-500">Pousada</h1>
-          <p className="text-2xl font-bold ml-2 text-blue-500">da Montanha</p>
-        </div>
-        <Link href="/"><Image className="w-[50px] h-[50px] mr-4 hover: cursor-pointer" src="/seta" alt="Pousada Logo" width={100} height={80} /></Link>
-      </div>
-
+      <CabecalhoPaginacao/>
       <Background />
 
       <fieldset className="border border-blue-500 rounded-lg p-4 mt-10 container mx-auto h-full   ">
@@ -211,10 +204,11 @@ export default function Reserva() {
             <span>{endereco?.ibge}</span>
           </div>
           <div>
-            <p  className="font-bold text-blue-500">GIA:</p>
+            <p>GIA:</p>
             <span> {endereco?.gia}</span>
           </div>
         </div>
+        <button className="block  mx-auto mt-28 font-bold bg-green-500 p-3 rounded-3xl">Fazer Reserva</button>
       </fieldset>
       <Rodape />
     </>
