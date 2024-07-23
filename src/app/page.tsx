@@ -25,7 +25,9 @@ export default function Home() {
         <Link href="/quartoIndividual">
           <Image className="w-[280px] h-[190px] mr-4 hover: cursor-pointer" src="/QuartoIndividual.jpg" alt="Pousada Logo" width={200} height={80} />
         </Link>
-        <Image className="w-[280px] h-[190px] mr-4  hover: cursor-pointer" src="/QuartoCasal.jpg" alt="Pousada Logo" width={200} height={80} />
+        <Link href="/quartoCasal">
+          <Image className="w-[280px] h-[190px] mr-4  hover: cursor-pointer" src="/QuartoCasal.jpg" alt="Pousada Logo" width={200} height={80} />
+        </Link>
         <Image className="w-[280px] h-[190px] mr-4 hover: cursor-pointer" src="/QuartoTematico.jpg" alt="Pousada Logo" width={200} height={80} />
       </div>
       <div className="flex space-x-44 justify-center  ">
