@@ -23,13 +23,13 @@ export default function Home() {
       </div>
       <div className="flex justify-center m-4 mt-7">
         <Link href="/quartoIndividual">
-          <Image className="w-[280px] h-[190px] mr-4 hover: cursor-pointer" src="/QuartoIndividual.jpg" alt="Pousada Logo" width={200} height={80} />
+          <Image className="w-[280px] h-[190px] mr-7 hover:scale-110 duration-300 " src="/QuartoIndividual.jpg" alt="Pousada Logo" width={200} height={80} />
         </Link>
         <Link href="/quartoCasal">
-          <Image className="w-[280px] h-[190px] mr-4  hover: cursor-pointer" src="/QuartoCasal.jpg" alt="Pousada Logo" width={200} height={80} />
+          <Image className="w-[280px] h-[190px] mr-7 hover:scale-110 duration-300 " src="/QuartoCasal.jpg" alt="Pousada Logo" width={200} height={80} />
         </Link>
         <Link href="/quartoTematico">
-          <Image className="w-[280px] h-[190px] mr-4 hover: cursor-pointer" src="/QuartoTematico.jpg" alt="Pousada Logo" width={200} height={80} />
+          <Image className="w-[280px] h-[190px] mr-7 hover:scale-110 duration-300" src="/QuartoTematico.jpg" alt="Pousada Logo" width={200} height={80} />
         </Link>
       </div>
       <div className="flex space-x-44 justify-center  ">
