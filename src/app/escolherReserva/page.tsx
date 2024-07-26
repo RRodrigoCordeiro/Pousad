@@ -11,7 +11,7 @@ const page = () => {
             <CabecalhoPaginacao />
             <Background />
             <h1 className="text-center font-bold mt-11 text-2xl">Escolha o quarto ideal para a sua Hospedagem</h1>
-            <h2 className="text-center mt-11 text-blue-500 font-bold">Opções disponíveis no momento:</h2>
+            <h2 className="text-center mt-11 text-green-900  text-2xl">Opções disponíveis no momento:</h2>
             <div className="flex flex-row justify-center space-x-44">
                 <Link href="#">
                     <Image
@@ -42,9 +42,9 @@ const page = () => {
                 </Link>
             </div>
             <div className="text-center flex flex-row  justify-evenly mt-10">
-                <p><span className="text-blue-500 font-bold">Capacidade Máxima:</span> 4 pessoas</p>
-                <p><span className="text-blue-500 font-bold">Capacidae Máxima:</span> 8 pessoas</p>
-                <p><span className="text-blue-500 font-bold">Capacidade Máxima:</span> 8 pessoas</p>
+                <p><span className="text-green-900">Capacidade Máxima:</span> 4 pessoas</p>
+                <p><span className="text-green-900">Capacidae Máxima:</span> 8 pessoas</p>
+                <p><span className="text-green-900">Capacidade Máxima:</span> 8 pessoas</p>
             </div>
             <Rodape />
         </>
