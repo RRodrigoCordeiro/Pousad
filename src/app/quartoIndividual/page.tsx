@@ -12,13 +12,13 @@ const Page = () => {
             <Background />
             <h1 className="text-center mt-12 text-2xl font-bold">CONHEÇA O QUARTO INDIVIDUAL</h1>
             
-                <Image
-                    src="/QuartoIndividual.jpg"
-                    alt="Quarto Individual"
-                    width={800} //opacid 
-                    height={80}
-                    className="m-auto w-[700px] h-[380px] mt-20 "
-                />
+            <Image
+                src="/QuartoIndividual.jpg"
+                alt="Quarto Individual"
+                width={800} //opacid 
+                height={80}
+                className="m-auto w-[700px] h-[380px] mt-20 "
+            />
             
             <div className='leading-10'>
                 <h2 className='font-bold text-center mt-8 mb-7'>O Quarto Individual é ideal para você!</h2>
