@@ -13,7 +13,7 @@ const page = () => {
             <h1 className="text-center font-bold mt-11 text-2xl">Escolha o quarto ideal para a sua Hospedagem</h1>
             <h2 className="text-center mt-11 text-green-900  text-2xl">Opções disponíveis no momento:</h2>
             <div className="flex flex-row justify-center space-x-44">
-                <Link href="#">
+                <Link href="/reservaIndividual">
                     <Image
                         src="/QuartoIndividual.jpg"
                         alt="Imagem do Quarto Individual"

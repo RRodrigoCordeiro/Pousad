@@ -34,7 +34,7 @@ const Page = () => {
                     <li><span className="font-bold text-blue-500">Capacidade Máxima: </span>Espaço privativo para até 4 pessoas</li>
                 </ul>
             </div>
-            <Link href="">
+            <Link href="/reservaIndividual">
                 <button className="font-bold bg-green-500 block mx-auto mt-12 rounded-3xl p-3">Fazer a reserva para o quarto Individual</button>
             </Link>
             {/* <img src="/QuartoIndividual.jpg" className='w-96 h-96 mx-auto'/> */}

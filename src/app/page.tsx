@@ -44,14 +44,14 @@ export default function Home() {
         <p>Conheça sobre mais sobre a melhor pousada da região</p>
       </div>
       <div className="flex justify-center space-x-6 mt-12">
-        <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+        <Image className="w-[100px] h-[100px] hover:scale-110 duration-300" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
         <div className="flex justify-center">
           <div>
             <h3 className="text-left font-bold mb-2">Garagem</h3>
             <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste debitis ab praesentium rem omnis aspernatur</p>
           </div>
         </div>
-        <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="" width={200} height={10} />
+        <Image className="w-[100px] h-[100px] hover:scale-110 duration-300" src="/QuartoCasal.jpg" alt="" width={200} height={10} />
         <div className="flex justify-center">
           <div>
             <h3 className="text-left font-bold mb-2 ">Café da manhã</h3>
@@ -60,14 +60,14 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-center space-x-6 mt-12">
-        <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+        <Image className="w-[100px] h-[100px] hover:scale-110 duration-300" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
         <div className="flex justify-center">
           <div>
             <h3 className="text-left font-bold mb-2">Espaço para Pets</h3>
             <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
           </div>
         </div>
-        <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+        <Image className="w-[100px] h-[100px] hover:scale-110 duration-300" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
         <div className="flex justify-center">
           <div>
             <h3 className="text-left font-bold mb-2">250 Metros perto da praia</h3>
@@ -76,14 +76,14 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-center space-x-6 mt-12">
-        <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+        <Image className="w-[100px] h-[100px] hover:scale-110 duration-300" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
         <div className="flex justify-center">
           <div>
             <h3 className="text-left font-bold mb-2">Piscina</h3>
             <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
           </div>
         </div>
-        <Image className="w-[100px] h-[100px]" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+        <Image className="w-[100px] h-[100px] hover:scale-110 duration-300" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
         <div className="flex justify-center">
           <div>
             <h3 className="text-left font-bold mb-2">Conforto</h3>
