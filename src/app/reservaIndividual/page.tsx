@@ -84,7 +84,9 @@ const page = () => {
         </fieldset>
         <h3 className='font-bold mt-10 ml-16'>Complete as informações abaixo:</h3>
         <CepApi/>
+        <button className="block  mx-auto mt-28 font-bold bg-green-500 p-3 rounded-3xl">Fazer Reserva</button>
         </fieldset>
+        
 
 
 
