@@ -5,10 +5,12 @@ import Cabecalho from "./components/Cabecalho";
 import Rodape from "./components/Rodape";
 import Localizacao from "./components/Localizacao";
 import Background from "./components/Background";
+import Carrosel from "./components/Carrosel";
 
 export default function Home() {
   return (
     <main>
+      
       <Cabecalho />
       <Background />
       <div className="text-3xl font-bold text-center mt-24 text-black-400" id="quartos">
@@ -37,6 +39,7 @@ export default function Home() {
         <p className="text-green-900">Quarto de Casal</p>
         <p className="text-green-900">Quarto Temático</p>
       </div>
+      <Carrosel/>
       <div className="text-center mt-20 text-2xl font-bold" id="sobre">
         <h3>Vantagens da Pousada</h3>
       </div>
