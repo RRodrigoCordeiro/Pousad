@@ -39,7 +39,7 @@ export default function Home() {
         <p className="text-green-900">Quarto de Casal</p>
         <p className="text-green-900">Quarto Temático</p>
       </div>
-      <div className="text-center mt-11  text-2xl font-bold" id="sobre">
+      <div className="text-center mt-14  text-2xl font-bold" id="sobre">
         <h3>Confira o feedback dos nossos hóspedes</h3>
       </div>
       <div className="text-center mt-5 text-1xl" >

@@ -8,8 +8,15 @@ import Image1 from '../../../public/depoimentoCarla.png'
 import Image2 from '../../../public/depoimentoFelipe.png'
 import Image3 from '../../../public/depoimentoPedro.png'
 import Image4 from '../../../public/depoimentorRafael.png'
+import Image5 from '../../../public/depoimentoFernanda.png'
+import Image6 from '../../../public/depoimentoCamila.png'
+import Image7 from '../../../public/depoimentoThiago.png'
+import Image8 from '../../../public/depoimentoAna.png'
+import Image9 from '../../../public/depoimentoCarolina.png'
+import Image10 from '../../../public/depoimentoBruno.png'
 
-const images = [Image1, Image2, Image3, Image4]
+
+const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10]
 
 
 const Carrosel = () => {
