@@ -7,6 +7,10 @@ import CabecalhoPaginacao from '../components/CabecalhoPaginacao';
 import axios from 'axios';
 import Calendario from '../components/Calendario';
 import CepApi from '../components/CepApi';
+import Modal from 'react-modal'
+import { FaCheck } from "react-icons/fa";
+import { ImAirplane } from "react-icons/im";
+import Link from 'next/link';
 
 
 export default function Reserva() {
@@ -14,6 +18,8 @@ export default function Reserva() {
   const [adulto, setAdulto] = useState(1);
   const [crianca, setCrianca] = useState(0);
   const [total, setTotal] = useState(0);
+  const [modalAberto, setModalAberto] = useState(false)
+ 
  
 
   const AdicionarAdulto = () => {
@@ -53,6 +59,12 @@ export default function Reserva() {
     setTotal(adulto + crianca);
   }, [adulto, crianca]);
 
+  const fecharModal = () => {
+    setModalAberto(false)
+
+  }
+  
+  
 
 
   return (
@@ -93,7 +105,30 @@ export default function Reserva() {
         </fieldset>
         <h3 className='font-bold mt-10 ml-16'>Complete as informações abaixo:</h3>
         <CepApi/>
-        <button className="block  mx-auto mt-28 font-bold bg-green-500 p-3 rounded-3xl">Fazer Reserva</button>
+        <Modal
+        isOpen={modalAberto}
+        onRequestClose={fecharModal}
+        shouldCloseOnOverlayClick={false}
+        className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-10 rounded-lg shadow-lg text-center z-[1050]"
+        >
+          <div className="flex items-center flex-col">
+            <FaCheck className='bg-green-600 rounded-full w-24 h-24 p-3 mb-3'/>
+            <h1 className="text-2xl">Parabéns pela reserva na <span className="font-bold text-2xl">Pousada</span> <span className="text-2xl text-blue-500">da Montanha</span>.</h1>
+            <p className="mt-3 text-2xl">Reserva realizada com seucesso!</p> 
+            <p className="text-2xl mt-3">Estamos te esperando!</p>
+
+            <div className="flex flex-row space-x-28 mt-3">
+              <Link href="/">
+                  Página Inicial 
+              </Link>
+              <button onClick={fecharModal}>Fechar</button>
+            </div>
+
+          </div>
+
+        </Modal>
+      
+        <button className="block  mx-auto mt-28 font-bold bg-green-500 p-3 rounded-3xl" onClick={() => setModalAberto(true)} >Fazer Reserva</button>
       </fieldset>
       <Rodape />
     </>

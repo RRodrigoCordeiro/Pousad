@@ -21,7 +21,7 @@ const CepApi = () => {
     const [endereco, setEndereco] = useState<Endereco | null>(null);
     const [error, setError] = useState(null);
 
-    const [pais, setPais] = useState([])
+    
 
     const buscarCep = () => {
 
@@ -40,15 +40,7 @@ const CepApi = () => {
 
     }
 
-    const urlBasePais = 'https://restcountries.com/v3.1/all';
-
-    axios.get(urlBasePais)
-        .then(response => {
-            setPais(response.data)
-        })
-        .catch(error => {
-            console.log("erro na api", error)
-        })
+   
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name;
@@ -124,18 +116,6 @@ const CepApi = () => {
                 <div>
                     <p className="font-bold text-blue-500">IBGE:</p>
                     <span>{endereco?.ibge}</span>
-                </div>
-                <div>
-                    <p className="font-bold text-blue-500">Selecione o pais que voce nasceu</p>
-                <select name="" id="">
-                    <option disabled selected>Selecionar</option>
-                      {pais.map((country) => (
-                         <option key={country}>
-                             {country.name.common}
-                         </option>
-                        ))}
-                </select>
-                    
                 </div>
             </div>
         </>

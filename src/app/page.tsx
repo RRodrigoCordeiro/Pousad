@@ -6,13 +6,10 @@ import Rodape from "./components/Rodape";
 import Localizacao from "./components/Localizacao";
 import Background from "./components/Background";
 import Carrosel from "./components/Carrosel";
-// flex justify-center m-4 mt-7
-// flex space-x-44 justify-center 
 
 export default function Home() {
   return (
     <main>
-      
       <Cabecalho />
       <Background />
       <div className="text-3xl font-bold text-center mt-24 text-black-400" id="quartos">

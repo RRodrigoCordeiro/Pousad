@@ -6,7 +6,6 @@ import Background from '../components/Background'
 import Rodape from '../components/Rodape'
 
 const page = () => {
-    // flex flex-row justify-center space-x-44
     return (
         <>
             <CabecalhoPaginacao />
