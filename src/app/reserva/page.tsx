@@ -9,6 +9,7 @@ import Calendario from '../components/Calendario';
 import CepApi from '../components/CepApi';
 import Modal from 'react-modal'
 import { FaCheck } from "react-icons/fa";
+import Toastify from 'toastify-js'
 import { ImAirplane } from "react-icons/im";
 import Link from 'next/link';
 
@@ -19,8 +20,8 @@ export default function Reserva() {
   const [crianca, setCrianca] = useState(0);
   const [total, setTotal] = useState(0);
   const [modalAberto, setModalAberto] = useState(false)
- 
- 
+
+
 
   const AdicionarAdulto = () => {
     if (adulto < 4) {
@@ -61,20 +62,29 @@ export default function Reserva() {
 
   const fecharModal = () => {
     setModalAberto(false)
+    
+    Toastify({
+      text: "RESERVA REALIZADA COM SUCESSO!",
+      duration: 4000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "left", // `left`, `center` or `right`
+      stopOnFocus: true,
+      className: " ml-8 mt-8 w-[350px] p-2",
+      style: {
+        background: "#00b09b",
+      }
+    }).showToast();
 
   }
-  
-  
-
-
   return (
     <>
-      <CabecalhoPaginacao/>
+      <CabecalhoPaginacao />
       <Background />
-      <fieldset className="border border-blue-500 rounded-lg p-4 mt-10 container mx-auto h-full   ">
+      <fieldset className="border border-blue-500 rounded-lg p-4 mt-10 container mx-auto h-full ">
         <legend className="font-bold">POUSADA DA <span className="text-blue-500 font-bold">MONTANHA</span></legend>
         <h1 className="text-center mb-10 text-blue-500 font-bold">Faça sua reserva e venha curtir o interior da melhor pousada da região</h1>
-        <Calendario/>
+        <Calendario />
         <fieldset className="flex flex-row items-center justify-evenly space-x-8 m-auto mt-11 border border-zinc-500 w-[620px] h-11">
           <h3 className="font-bold text-blue-500">Adulto(s)</h3>
           <button onClick={AdicionarAdulto} className="border border-zinc-950 rounded-full h-7 w-7 mt-1 flex items-center justify-center">+</button>
@@ -104,30 +114,27 @@ export default function Reserva() {
           <p>{total}</p>
         </fieldset>
         <h3 className='font-bold mt-10 ml-16'>Complete as informações abaixo:</h3>
-        <CepApi/>
+        <CepApi />
         <Modal
-        isOpen={modalAberto}
-        onRequestClose={fecharModal}
-        shouldCloseOnOverlayClick={false}
-        className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-10 rounded-lg shadow-lg text-center z-[1050]"
+          isOpen={modalAberto}
+          onRequestClose={fecharModal}
+          shouldCloseOnOverlayClick={false}
+          className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-10 rounded-lg shadow-lg text-center z-[1050]"
         >
           <div className="flex items-center flex-col">
-            <FaCheck className='bg-green-600 rounded-full w-24 h-24 p-3 mb-3'/>
-            <h1 className="text-2xl">Parabéns pela reserva na <span className="font-bold text-2xl">Pousada</span> <span className="text-2xl text-blue-500">da Montanha</span>.</h1>
-            <p className="mt-3 text-2xl">Reserva realizada com seucesso!</p> 
-            <p className="text-2xl mt-3">Estamos te esperando!</p>
+            <FaCheck className='bg-green-600 rounded-full w-24 h-24 p-3 mb-3' />
+            <h1 className=" text-base lg:text-2xl">Parabéns pela reserva na <span className="font-bold text-base lg:text-2xl">Pousada</span> <span className="text-base lg:text-2xl text-blue-500">da Montanha</span>.</h1>
+            <p className="mt-3 text-base lg:text-2xl">Reserva realizada com seucesso!</p>
+            <p className="text-base lg:text-2xl mt-3">Estamos te esperando!</p>
 
-            <div className="flex flex-row space-x-28 mt-3">
-              <Link href="/">
-                  Página Inicial 
-              </Link>
-              <button onClick={fecharModal}>Fechar</button>
-            </div>
 
+            <Link href="/" className="mt-3 font-bold text-green-600 text-lg" onClick={fecharModal}>
+              Fechar
+            </Link>
           </div>
 
         </Modal>
-      
+
         <button className="block  mx-auto mt-28 font-bold bg-green-500 p-3 rounded-3xl" onClick={() => setModalAberto(true)} >Fazer Reserva</button>
       </fieldset>
       <Rodape />
