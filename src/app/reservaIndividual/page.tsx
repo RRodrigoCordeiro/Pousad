@@ -7,6 +7,7 @@ import Rodape from '../components/Rodape'
 import Calendario from '../components/Calendario'
 import CepApi from '../components/CepApi';
 import Modal from  'react-modal'
+import Toastify from 'toastify-js'
 import Link from 'next/link';
 
 
@@ -54,6 +55,18 @@ const page = () => {
 
     const fecharModal = () => {
         setModalAberto(false)
+        Toastify({
+            text: "RESERVA REALIZADA COM SUCESSO!",
+            duration: 4000,
+            close: true,
+            gravity: "top", 
+            position: "left", 
+            stopOnFocus: true,
+            className: " ml-8 mt-8 w-[350px] p-2",
+            style: {
+              background: "#00b09b",
+            }
+          }).showToast();
     }
 
   return (

@@ -67,8 +67,8 @@ export default function Reserva() {
       text: "RESERVA REALIZADA COM SUCESSO!",
       duration: 4000,
       close: true,
-      gravity: "top", // `top` or `bottom`
-      position: "left", // `left`, `center` or `right`
+      gravity: "top", 
+      position: "left", 
       stopOnFocus: true,
       className: " ml-8 mt-8 w-[350px] p-2",
       style: {
