@@ -77,6 +77,7 @@ const page = () => {
 
         <fieldset className="border border-blue-500 rounded-lg p-4 mt-10 container md:w-[750px] lg:w-[1000px] w-auto mx-auto h-full">
         <legend className="font-bold">POUSADA DA <span className="text-blue-500 font-bold">MONTANHA</span></legend>
+        <h1 className="text-center mb-10 text-blue-500 font-bold">Faça sua reserva e venha curtir o interior da melhor pousada da região</h1>
         <Calendario/>
         <fieldset className="flex flex-row items-center justify-evenly space-x-8 m-auto mt-11 border border-zinc-500 w-[300px] lg:w-[620px] h-11">
           <h3 className="font-bold text-blue-500">Adulto(s)</h3>
