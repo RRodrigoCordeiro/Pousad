@@ -81,9 +81,16 @@ export default function Reserva() {
     <>
       <CabecalhoPaginacao />
       <Background />
-      <fieldset className="border border-blue-500 rounded-lg p-4 mt-10 container sm:w-10 mx-auto h-full ">
+      <fieldset className="border border-blue-500 rounded-lg p-4 mt-10 container md:w-[750px] lg:w-[1000px] w-auto mx-auto h-full ">
         <legend className="font-bold">POUSADA DA <span className="text-blue-500 font-bold">MONTANHA</span></legend>
         <h1 className="text-center mb-10 text-blue-500 font-bold">Faça sua reserva e venha curtir o interior da melhor pousada da região</h1>
+        <h2 className='text-red-600 font-bold text-center mb-8'>Regras da pousada para este quarto:</h2>
+        <ul className='list-decimal ml-3 '>
+            <li className="mb-3">O quarto acomoda até 4 adultos e 4 crianças, sendo impossível acomodar mais de 4 adultos devido ao espaço disponível.</li>
+            <li className="mb-3">A capacidade máxima do quarto é de 8 pessoas.</li>
+            <li className="mb-3">Mesmo sem a presença de crianças, o quarto não comporta mais de 4 adultos por conta das limitações de espaço.</li>
+            <li className="mb-3">A reserva deve incluir, no mínimo, um adulto.</li>
+        </ul>
         <Calendario />
         <fieldset className="flex flex-row items-center justify-evenly space-x-8 m-auto mt-11 border border-zinc-500 w-[300px] lg:w-[620px] h-11">
           <h3 className="font-bold text-blue-500">Adulto(s)</h3>

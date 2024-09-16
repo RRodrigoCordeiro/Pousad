@@ -1,6 +1,6 @@
 
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const CepApi = () => {
@@ -21,7 +21,7 @@ const CepApi = () => {
     const [endereco, setEndereco] = useState<Endereco | null>(null);
     const [error, setError] = useState(null);
 
-    
+
 
     const buscarCep = () => {
 
@@ -29,9 +29,15 @@ const CepApi = () => {
 
         axios.get(urlBase)
             .then(response => {
-                setEndereco(response.data);
-                setError(null)
+                if (response.data.erro) {
+                    setError("CEP não encontrado.");
+                    setEndereco(null);
+                } else {
+                    setEndereco(response.data);
+                    setError(null);
+                }
             })
+
             .catch(error => {
                 console.log("Atenção: Erro ao buscar CEP", error)
                 setError("Erro ao buscar CEP");
@@ -39,8 +45,15 @@ const CepApi = () => {
             })
 
     }
+    useEffect(() => {
+        if (cep.length === 8) {
+            buscarCep(cep);
+        } else if(cep.length > 1  ) {
+            setError("Digitação Invalida")
+        }
+    }, [cep]);
 
-   
+
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name;
@@ -58,7 +71,6 @@ const CepApi = () => {
     return (
         <>
             <div className='mt-6 mb-12 flex justify-center space-x-3  lg:space-x-9 '>
-                <button onClick={buscarCep}>Clicar para buscar CEP:</button>
                 <input
                     type="text"
                     value={cep}
@@ -73,7 +85,7 @@ const CepApi = () => {
                     <p className="font-bold text-blue-500">Endereço:</p>
                     <span>{endereco?.cep}</span>
                 </div>
-                <div  className="flex sm:flex-row mt-10 space-x-7  lg:mt-0 lg:space-x-0 lg:flex-col">
+                <div className="flex sm:flex-row mt-10 space-x-7  lg:mt-0 lg:space-x-0 lg:flex-col">
                     <p className="font-bold text-blue-500">Logradouro:</p>
                     <span>{endereco?.logradouro} </span>
                 </div>
@@ -108,7 +120,7 @@ const CepApi = () => {
                     <input
                         type="text"
                         name="complemento"
-                        value={endereco?.ddd}
+                        value={endereco?.ddd || ''}
                         onChange={handleChange}
                         className='border border-zinc-600'
                     />
