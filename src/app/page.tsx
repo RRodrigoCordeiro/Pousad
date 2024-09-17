@@ -5,7 +5,7 @@ import Cabecalho from "./components/Cabecalho";
 import Rodape from "./components/Rodape";
 import Localizacao from "./components/Localizacao";
 import Background from "./components/Background";
-import Carrosel from "./components/Carrosel";
+import Carrossel from "./components/Carrossel";
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
       <div className="text-center mt-5 text-1xl" >
         <p>Veja o melhor feedback da cidade!</p>
       </div>
-      <Carrosel/>
+      <Carrossel/>
       <div className="text-center  text-2xl font-bold" id="sobre">
         <h3>Vantagens da Pousada</h3>
       </div>
