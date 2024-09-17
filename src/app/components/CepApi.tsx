@@ -49,7 +49,7 @@ const CepApi = () => {
         if (cep.length === 8) {
             buscarCep(cep);
         } else if(cep.length > 1  ) {
-            setError("Digitação Invalida")
+            setError("Digitação Inválida")
         }
     }, [cep]);
 

@@ -8,8 +8,8 @@ import Rodape from '../components/Rodape';
 const page = () => {
     return (
         <>
-            <CabecalhoPaginacao/>
-            <Background/>
+            <CabecalhoPaginacao />
+            <Background />
             <h1 className="font-bold text-center mt-12 text-2xl">CONHEÇA O QUARTO DE CASAL</h1>
             <Image
                 src="/QuartoCasal.jpg"
@@ -29,14 +29,14 @@ const page = () => {
                     <li><span className="font-bold text-blue-500">Cofre de Segurança:</span>Proteção extra ara seus pertences</li>
                     <li><span className="font-bold text-blue-500">Vista Panorâmica:</span>Janelas com vistas espetaculares</li>
                     <li><span className="font-bold text-blue-500">Cama King Size: </span>Espaço idela para maior conforto</li>
-                    <li><span className="font-bold text-blue-500">Frigobar:</span>Bebidas e disponíveis dentro do quarto</li>                   
-                    <li><span className="font-bold text-blue-500">Limpeza Diária: </span>Quartos simpecáveis</li>
+                    <li><span className="font-bold text-blue-500">Frigobar:</span>Bebidas e disponíveis dentro do quarto</li>
+                    <li><span className="font-bold text-blue-500">Limpeza Diária: </span>Quartos impecáveis</li>
                 </ul>
             </div>
             <Link href="/reserva">
                 <button className="font-bold bg-green-500 block mx-auto mt-12 rounded-3xl p-3">Fazer reserva para o quarto de casal</button>
             </Link>
-            <Rodape/>
+            <Rodape />
         </>
     )
 }

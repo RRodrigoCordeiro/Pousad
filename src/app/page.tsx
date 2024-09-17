@@ -9,7 +9,7 @@ import Carrosel from "./components/Carrosel";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Cabecalho />
       <Background />
       <div className="text-3xl font-bold text-center mt-24 text-black-400" id="quartos">
@@ -99,7 +99,6 @@ export default function Home() {
         </div>
       <Localizacao />
       <Rodape />
-
-    </main>
+    </>
   );
 }

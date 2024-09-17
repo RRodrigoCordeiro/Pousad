@@ -4,13 +4,11 @@ import React, { useState, useEffect } from 'react';
 import Rodape from '../components/Rodape';
 import Background from '../components/Background';
 import CabecalhoPaginacao from '../components/CabecalhoPaginacao';
-import axios from 'axios';
 import Calendario from '../components/Calendario';
 import CepApi from '../components/CepApi';
 import Modal from 'react-modal'
 import { FaCheck } from "react-icons/fa";
 import Toastify from 'toastify-js'
-import { ImAirplane } from "react-icons/im";
 import Link from 'next/link';
 
 
@@ -62,13 +60,13 @@ export default function Reserva() {
 
   const fecharModal = () => {
     setModalAberto(false)
-    
+
     Toastify({
       text: "RESERVA REALIZADA COM SUCESSO!",
       duration: 4000,
       close: true,
-      gravity: "top", 
-      position: "left", 
+      gravity: "top",
+      position: "left",
       stopOnFocus: true,
       className: " ml-8 mt-8 w-[350px] p-2",
       style: {
@@ -86,10 +84,10 @@ export default function Reserva() {
         <h1 className="text-center mb-10 text-blue-500 font-bold">Faça sua reserva e venha curtir o interior da melhor pousada da região</h1>
         <h2 className='text-red-600 font-bold text-center mb-8'>Regras da pousada para este quarto:</h2>
         <ul className='list-decimal ml-3 '>
-            <li className="mb-3">O quarto acomoda até 4 adultos e 4 crianças, sendo impossível acomodar mais de 4 adultos devido ao espaço disponível.</li>
-            <li className="mb-3">A capacidade máxima do quarto é de 8 pessoas.</li>
-            <li className="mb-3">Mesmo sem a presença de crianças, o quarto não comporta mais de 4 adultos por conta das limitações de espaço.</li>
-            <li className="mb-3">A reserva deve incluir, no mínimo, um adulto.</li>
+          <li className="mb-3">O quarto acomoda até 4 adultos e 4 crianças, sendo impossível acomodar mais de 4 adultos devido ao espaço disponível.</li>
+          <li className="mb-3">A capacidade máxima do quarto é de 8 pessoas.</li>
+          <li className="mb-3">Mesmo sem a presença de crianças, o quarto não comporta mais de 4 adultos por conta das limitações de espaço.</li>
+          <li className="mb-3">A reserva deve incluir, no mínimo, um adulto.</li>
         </ul>
         <Calendario />
         <fieldset className="flex flex-row items-center justify-evenly space-x-8 m-auto mt-11 border border-zinc-500 w-[300px] lg:w-[620px] h-11">
@@ -133,15 +131,11 @@ export default function Reserva() {
             <h1 className=" text-base lg:text-2xl">Parabéns pela reserva na <span className="font-bold text-base lg:text-2xl">Pousada</span> <span className="text-base lg:text-2xl text-blue-500">da Montanha</span>.</h1>
             <p className="mt-3 text-base lg:text-2xl">Reserva realizada com seucesso!</p>
             <p className="text-base lg:text-2xl mt-3">Estamos te esperando!</p>
-
-
             <Link href="/" className="mt-3 font-bold text-green-600 text-lg" onClick={fecharModal}>
               Fechar
             </Link>
           </div>
-
         </Modal>
-
         <button className="block  mx-auto mt-28 font-bold bg-green-500 p-3 rounded-3xl" onClick={() => setModalAberto(true)} >Fazer Reserva</button>
       </fieldset>
       <Rodape />

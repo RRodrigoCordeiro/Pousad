@@ -23,7 +23,6 @@ const page = () => {
                     />
                     <p className="text-center mt-8"><span className="text-green-900">Capacidade Máxima:</span> 4 pessoas</p>
                 </Link>
-                
                 <Link href="/reserva">
                     <Image
                         src="/QuartoCasal.jpg"
@@ -32,7 +31,7 @@ const page = () => {
                         height={10}
                         className=" w-[290px] h-[300px] mt-20 hover:scale-110 duration-300 "
                     />
-                     <p className="text-center mt-8"><span className="text-green-900">Capacidade Máxima:</span> 8 pessoas</p>
+                    <p className="text-center mt-8"><span className="text-green-900">Capacidade Máxima:</span> 8 pessoas</p>
                 </Link>
                 <Link href="/reserva">
                     <Image
