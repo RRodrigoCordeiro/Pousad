@@ -36,12 +36,6 @@ export default function Home() {
           <p className="text-center text-green-900 mt-3 mb-3">Quarto Temático</p>
         </Link>
       </div>
-      {/* <div className="flex flex-col items-center space-y-28  ">
-    <p className="text-green-900">Quarto Individual</p>
-    <p className="text-green-900">Quarto de Casal</p>
-    <p className="text-green-900">Quarto Temático</p>
-</div> */}
-
       <div className="text-center mt-14  text-2xl font-bold" id="sobre">
         <h3>Confira o feedback dos nossos hóspedes</h3>
       </div>
@@ -60,14 +54,14 @@ export default function Home() {
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">Garagem</h3>
-              <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste debitis ab praesentium rem omnis aspernatur</p>
+              <p className="w-[320px]  text-left"> Temos uma garagem espaçosa e de fácil acesso, garantindo segurança e conforto para o seu veículo durante toda a estadia.</p>
             </div>
           </div>
           <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/QuartoCasal.jpg" alt="" width={200} height={10} />
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2 ">Café da manhã</h3>
-              <p className="w-[320px] text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis rem nam natus reiciendis facere praesentium mollitia .</p>
+              <p className="w-[320px] text-left">O café da manhã é variado, com ingredientes frescos, incluindo frutas, pães artesanais, sucos e cafés especiais.</p>
             </div>
           </div>
         </div>
@@ -76,14 +70,14 @@ export default function Home() {
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">Espaço para Pets</h3>
-              <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
+              <p className="w-[320px]  text-left"> A pousada tem um espaço dedicado para pets, onde seu animal de estimação pode brincar em segurança.</p>
             </div>
           </div>
           <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">250 Metros perto da praia</h3>
-              <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
+              <p className="w-[320px]  text-left">Estamos localizados a apenas 250 metros da praia, oferecendo fácil acesso à areia e ao mar.</p>
             </div>
           </div>
         </div>
@@ -92,14 +86,14 @@ export default function Home() {
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">Piscina</h3>
-              <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
+              <p className="w-[320px]  text-left">Piscinas refrescante, ideal para um mergulho ou para se bronzear ao sol. Um espaço perfeito para momentos de lazer.</p>
             </div>
           </div>
           <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">Conforto</h3>
-              <p className="w-[320px]  text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quod cupiditate inventore. Quod consequuntur</p>
+              <p className="w-[320px]  text-left"> Experimente o máximo em conforto com nossas acomodações bem equipadas, que garantem uma estadia agradável.</p>
             </div>
           </div>
         </div>
