@@ -1,6 +1,6 @@
 
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useCallback } from 'react';
 import axios from 'axios';
 
 const CepApi = () => {
@@ -19,11 +19,11 @@ const CepApi = () => {
 
     const [cep, setCep] = useState('');
     const [endereco, setEndereco] = useState<Endereco | null>(null);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null);
 
 
 
-    const buscarCep = () => {
+    const buscarCep = useCallback(() => {
 
         const urlBase = `https://viacep.com.br/ws/${cep}/json/`
 
@@ -44,16 +44,14 @@ const CepApi = () => {
                 setEndereco(null)
             })
 
-    }
+    },[cep]);
     useEffect(() => {
         if (cep.length === 8) {
-            buscarCep(cep);
+            buscarCep();
         } else if(cep.length > 1  ) {
             setError("Digitação Inválida")
         }
-    }, [cep]);
-
-
+    }, [cep,buscarCep]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name;
@@ -94,7 +92,7 @@ const CepApi = () => {
                     <input
                         type="text"
                         name="complemento"
-                        value={endereco?.complemento}
+                        value={endereco?.complemento || ''}
                         onChange={handleChange}
                         className='border border-zinc-600'
                     />

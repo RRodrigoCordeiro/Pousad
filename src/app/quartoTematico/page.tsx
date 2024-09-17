@@ -5,7 +5,7 @@ import Rodape from '../components/Rodape'
 import Image from "next/image";
 import Link from 'next/link';
 
-const page = () => {
+const Page = () => {
   return (
     <>
         <CabecalhoPaginacao/>
@@ -41,4 +41,4 @@ const page = () => {
     </>
   )
 }
-export default page
+export default Page

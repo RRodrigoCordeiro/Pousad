@@ -10,7 +10,7 @@ import Modal from 'react-modal'
 import Toastify from 'toastify-js'
 import Link from 'next/link';
 
-const page = () => {
+const Page = () => {
     const [adulto, setAdulto] = useState(1)
     const [crianca, setCrianca] = useState(0)
     const [total, setTotal] = useState(0)
@@ -50,7 +50,7 @@ const page = () => {
     }
     useEffect(() => {
         setTotal(crianca + adulto)
-    });
+    },[crianca, adulto]);
 
     const fecharModal = () => {
         setModalAberto(false)
@@ -132,4 +132,4 @@ const page = () => {
         </>
     )
 }
-export default page
+export default Page

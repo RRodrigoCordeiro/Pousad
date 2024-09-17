@@ -5,7 +5,7 @@ import CabecalhoPaginacao from '../components/CabecalhoPaginacao'
 import Background from '../components/Background'
 import Rodape from '../components/Rodape'
 
-const page = () => {
+const Page = () => {
     return (
         <>
             <CabecalhoPaginacao />
@@ -49,4 +49,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
