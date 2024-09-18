@@ -32,7 +32,7 @@ Este projeto foi desenvolvido com o objetivo de proporcionar uma experiência in
 ###  Imagem da Página de Reserva
 
 
-![Web 1](public/PaginaReserva.png)
+![Web 1](public/paginaReserva.png)
 
 
 
