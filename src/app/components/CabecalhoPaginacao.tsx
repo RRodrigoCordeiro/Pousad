@@ -10,7 +10,7 @@ const CabecalhoPaginacao = () => {
                     <h1 className="text-2xl font-bold ml-2 text-black-500">Pousada</h1>
                     <p className="text-2xl font-bold ml-2 text-blue-500">da Montanha</p>
                 </div>
-                <Link href="/"><Image className="w-[50px] h-[50px] mr-4 hover: cursor-pointer" src="/seta.png" alt="Pousada Logo" width={100} height={80} /></Link>
+                <Link href="/"><Image className="w-[50px] h-[50px] mr-4 hover: cursor-pointer" src="/image/seta.png" alt="Pousada Logo" width={100} height={80} /></Link>
             </div>
         </>
     )

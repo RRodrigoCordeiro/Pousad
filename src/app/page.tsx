@@ -24,15 +24,15 @@ export default function Home() {
       </div>
       <div className="flex flex-col justify-center items-center space-y-12 lg:flex-row lg:justify-center m-4 lg:space-y-0   ">
         <Link href="/quartoIndividual">
-          <Image className="w-[280px] h-[190px] mr-7 hover:scale-110 duration-300 " src="/QuartoIndividual.jpg" alt="Pousada Logo" width={200} height={80} />
+          <Image className="w-[280px] h-[190px] mr-7 hover:scale-110 duration-300 " src="/image/QuartoIndividual.jpg" alt="Quarto Individual" width={200} height={80} />
           <p className="text-center text-green-900 mt-3 mb-3">Quarto Individual</p>
         </Link>
         <Link href="/quartoCasal">
-          <Image className="w-[280px] h-[190px] mr-7 hover:scale-110 duration-300 " src="/QuartoCasal.jpg" alt="Pousada Logo" width={200} height={80} />
+          <Image className="w-[280px] h-[190px] mr-7 hover:scale-110 duration-300 " src="/image/QuartoCasal.jpg" alt="Quarto de casal" width={200} height={80} />
           <p className="text-center text-green-900 mt-3 mb-3">Quarto de Casal</p>
         </Link>
         <Link href="/quartoTematico">
-          <Image className="w-[280px] h-[190px] mr-7 hover:scale-110 duration-300" src="/QuartoTematico.jpg" alt="Pousada Logo" width={200} height={80} />
+          <Image className="w-[280px] h-[190px] mr-7 hover:scale-110 duration-300" src="/image/QuartoTematico.jpg" alt="Quarto Teatico" width={200} height={80} />
           <p className="text-center text-green-900 mt-3 mb-3">Quarto Temático</p>
         </Link>
       </div>
@@ -50,14 +50,14 @@ export default function Home() {
         <p>Conheça sobre mais sobre a melhor pousada da região</p>
       </div>
         <div className="flex flex-col lg:flex-row justify-center space-y-6 lg:space-y-0 lg:space-x-6 mt-12">
-          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0 " src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0 " src="/image/garagem.jpg" alt="garagem" width={200} height={10} />
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">Garagem</h3>
               <p className="w-[320px]  text-left"> Temos uma garagem espaçosa e de fácil acesso, garantindo segurança e conforto para o seu veículo durante toda a estadia.</p>
             </div>
           </div>
-          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/QuartoCasal.jpg" alt="" width={200} height={10} />
+          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/image/cafeDaManha.jpg" alt="Café da manhã" width={200} height={10} />
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2 ">Café da manhã</h3>
@@ -66,14 +66,14 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-center space-y-6 lg:space-y-0 lg:space-x-6 mt-12">
-          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/image/espacoPet.jpg" alt="Espaço para pets" width={200} height={10} />
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">Espaço para Pets</h3>
               <p className="w-[320px]  text-left"> A pousada tem um espaço dedicado para pets, onde seu animal de estimação pode brincar em segurança.</p>
             </div>
           </div>
-          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/image/praia.jpg" alt="praia" width={200} height={10} />
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">250 Metros perto da praia</h3>
@@ -82,14 +82,14 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-center space-y-6 lg:space-y-0 lg:space-x-6 mt-12">
-          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/image/piscina.jpg" alt="Piscina" width={200} height={10} />
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">Piscina</h3>
               <p className="w-[320px]  text-left">Piscinas refrescante, ideal para um mergulho ou para se bronzear ao sol. Um espaço perfeito para momentos de lazer.</p>
             </div>
           </div>
-          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/QuartoCasal.jpg" alt="quarto teste" width={200} height={10} />
+          <Image className="w-[100px] h-[100px] hover:scale-110 duration-300 m-auto lg:m-0" src="/image/QuartoCasal.jpg" alt="conforto" width={200} height={10} />
           <div className="flex justify-center">
             <div>
               <h3 className="text-left font-bold mb-2">Conforto</h3>

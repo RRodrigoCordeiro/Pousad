@@ -12,7 +12,7 @@ const Page = () => {
             <Background />
             <h1 className="font-bold text-center mt-12 text-2xl">CONHEÇA O QUARTO DE CASAL</h1>
             <Image
-                src="/QuartoCasal.jpg"
+                src="/image/QuartoCasal.jpg"
                 alt="Quarto Casal"
                 width={800} //opacid 
                 height={80}

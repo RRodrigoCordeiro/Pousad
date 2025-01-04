@@ -12,7 +12,7 @@ const Page = () => {
         <Background/>
         <h1 className="text-center mt-12 text-2xl font-bold">Conheça o quarto ideal para você!</h1>
         <Image
-            src="/QuartoTematico.jpg"
+            src="/image/QuartoTematico.jpg"
             alt="Quarto Individual"
             width={800} //opacid 
             height={80}

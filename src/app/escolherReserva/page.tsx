@@ -15,7 +15,7 @@ const Page = () => {
             <div className="flex flex-col justify-center items-center lg:flex-row lg:space-x-8">
                 <Link href="/reservaIndividual">
                     <Image
-                        src="/QuartoIndividual.jpg"
+                        src="/image/QuartoIndividual.jpg"
                         alt="Imagem do Quarto Individual"
                         width={510}
                         height={10}
@@ -25,8 +25,8 @@ const Page = () => {
                 </Link>
                 <Link href="/reserva">
                     <Image
-                        src="/QuartoCasal.jpg"
-                        alt="Imagem do Quarto Individual"
+                        src="/image/QuartoCasal.jpg"
+                        alt="Imagem do Quarto de casal"
                         width={510}
                         height={10}
                         className=" w-[290px] h-[300px] mt-20 hover:scale-110 duration-300 "
@@ -35,8 +35,8 @@ const Page = () => {
                 </Link>
                 <Link href="/reserva">
                     <Image
-                        src="/QuartoTematico.jpg"
-                        alt="Imagem do Quarto Individual"
+                        src="/image/QuartoTematico.jpg"
+                        alt="Imagem do Quarto Tematico"
                         width={510}
                         height={10}
                         className=" w-[290px] h-[300px] mt-20 hover:scale-110 duration-300"
