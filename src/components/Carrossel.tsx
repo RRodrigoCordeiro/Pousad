@@ -4,16 +4,17 @@ import { motion, useAnimation } from 'framer-motion'
 import Image from 'next/image'
 
 
-import Image1 from '../../../public/image/depoimentoCarla.png'
-import Image2 from '../../../public/image/depoimentoFelipe.png'
-import Image3 from '../../../public/image/depoimentoPedro.png'
-import Image4 from '../../../public/image/depoimentorRafael.png'
-import Image5 from '../../../public/image/depoimentoFernanda.png'
-import Image6 from '../../../public/image/depoimentoCamila.png'
-import Image7 from '../../../public/image/depoimentoThiago.png'
-import Image8 from '../../../public/image/depoimentoAna.png'
-import Image9 from '../../../public/image/depoimentoCarolina.png'
-import Image10 from '../../../public/image/depoimentoBruno.png'
+import Image1 from '../../public/image/depoimentoCarla.png'
+import Image2 from '../../public/image/depoimentoFelipe.png'
+import Image3 from '../../public/image/depoimentoPedro.png'
+import Image4 from '../../public/image/depoimentorRafael.png'
+import Image5 from '../../public/image/depoimentoFernanda.png'
+import Image6 from '../../public/image/depoimentoCamila.png'
+import Image7 from '../../public/image/depoimentoThiago.png'
+import Image8 from '../../public/image/depoimentoAna.png'
+import Image9 from '../../public/image/depoimentoCarolina.png'
+import Image10 from '../../public/image/depoimentoBruno.png'
+
 
 
 const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10]

@@ -1,7 +1,7 @@
 import React from 'react'
-import CabecalhoPaginacao from '../components/CabecalhoPaginacao'
-import Background from '../components/Background'
-import Rodape from '../components/Rodape'
+import CabecalhoPaginacao from '../../components/CabecalhoPaginacao'
+import Background from '../../components/Background'
+import Rodape from '../../components/Rodape'
 import Image from "next/image";
 import Link from 'next/link';
 

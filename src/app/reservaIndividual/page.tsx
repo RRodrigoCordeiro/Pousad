@@ -1,11 +1,11 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { FaCheck } from "react-icons/fa";
-import CabecalhoPaginacao from '../components/CabecalhoPaginacao'
-import Background from '../components/Background'
-import Rodape from '../components/Rodape'
-import Calendario from '../components/Calendario'
-import CepApi from '../components/CepApi';
+import CabecalhoPaginacao from '../../components/CabecalhoPaginacao'
+import Background from '../../components/Background'
+import Rodape from '../../components/Rodape'
+import Calendario from '../../components/Calendario'
+import CepApi from '../../components/CepApi';
 import Modal from 'react-modal'
 import Toastify from 'toastify-js'
 import Link from 'next/link';

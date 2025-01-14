@@ -1,11 +1,11 @@
 // app/reserva/reserva.tsx
 "use client"
 import React, { useState, useEffect } from 'react';
-import Rodape from '../components/Rodape';
-import Background from '../components/Background';
-import CabecalhoPaginacao from '../components/CabecalhoPaginacao';
-import Calendario from '../components/Calendario';
-import CepApi from '../components/CepApi';
+import Rodape from '../../components/Rodape';
+import Background from '../../components/Background';
+import CabecalhoPaginacao from '../../components/CabecalhoPaginacao';
+import Calendario from '../../components/Calendario';
+import CepApi from '../../components/CepApi';
 import Modal from 'react-modal'
 import { FaCheck } from "react-icons/fa";
 import Toastify from 'toastify-js'

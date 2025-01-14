@@ -17,22 +17,22 @@ Este projeto foi desenvolvido com o objetivo de proporcionar uma experiência in
 ## Layout mobile
 ### Imagem da Página Principal  
 
-![Mobile 1](public/PaginaPrincipalMobile.png)
+![Mobile 1](public/image/PaginaPrincipalMobile.png)
 
 ###  Imagem da Página de Reserva
 
-![Mobile 1](public/PaginaReservaMobile.png) 
+![Mobile 1](public/image/PaginaReservaMobile.png) 
 
 
 ## Layout web
 ### Imagem da Página Principal 
 
-![Web 1](public/PaginaPrincipal.png)
+![Web 1](public/image/PaginaPrincipal.png)
 
 ###  Imagem da Página de Reserva
 
 
-![Web 1](public/paginaReserva.png)
+![Web 1](public/image/paginaReserva.png)
 
 
 

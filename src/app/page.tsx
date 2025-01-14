@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from 'react';
 import Link from "next/link";
-import Cabecalho from "./components/Cabecalho";
-import Rodape from "./components/Rodape";
-import Localizacao from "./components/Localizacao";
-import Background from "./components/Background";
-import Carrossel from "./components/Carrossel";
+import Cabecalho from "../components/Cabecalho";
+import Rodape from "../components/Rodape";
+import Localizacao from "../components/Localizacao";
+import Background from "../components/Background";
+import Carrossel from "../components/Carrossel";
 
 export default function Home() {
   return (

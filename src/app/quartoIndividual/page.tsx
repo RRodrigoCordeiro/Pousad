@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from "next/image";
 import Link from 'next/link';
-import CabecalhoPaginacao from '../components/CabecalhoPaginacao';
-import Background from '../components/Background';
-import Rodape from '../components/Rodape';
+import CabecalhoPaginacao from '../../components/CabecalhoPaginacao';
+import Background from '../../components/Background';
+import Rodape from '../../components/Rodape';
 
 const Page = () => {
     return (
